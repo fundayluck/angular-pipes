@@ -9,5 +9,9 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'pipes';
+  name: string | undefined
+
+  onNameChange(event: Event | null) {
+    this.name = (event?.target as HTMLInputElement).value
+  }
 }
