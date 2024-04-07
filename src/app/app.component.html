@@ -11,4 +11,15 @@
       <div>{{ name | titlecase }}</div>
     </div>
   </div>
+
+  <div class="row">
+    <div class="form-group col">
+      <label>Payment Date</label>
+      <input type="date" class="form-control" (input)="onDateChange($event)" />
+    </div>
+    <div class="col">
+      <label><b>Payment Date</b></label>
+      <div>{{ date }}</div>
+    </div>
+  </div>
 </div>

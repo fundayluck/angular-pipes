@@ -10,9 +10,14 @@ import { TitleCasePipe } from '@angular/common';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  name: string | undefined
+  name?: string
+  date?: string
 
-  onNameChange(event: Event | null) {
+  onNameChange(event: Event) {
     this.name = (event?.target as HTMLInputElement).value
+  }
+
+  onDateChange(event: Event) {
+    this.date = (event?.target as HTMLInputElement).value
   }
 }
